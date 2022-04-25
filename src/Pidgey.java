@@ -9,8 +9,9 @@ public class Pidgey extends Pokemon {
     @Override
     public void attack(Pokemon enemy, int attackIndex) {
         if ((enemy.getType().compareTo("Bug") == 0 || enemy.getType().compareTo("Fighting") == 0 || enemy.getType().compareTo("Grass") == 0)) {
-            System.out.print("Pidgey attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n"); //Super effective
+           //Super effective
             try {
+                System.out.print("Pidgey attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n");
                 int damage = super.getAttackSet().get(attackIndex).baseDamage * 2;
                 if((enemy.getHp() < damage))
                 {
@@ -29,6 +30,7 @@ public class Pidgey extends Pokemon {
             }
         } else if (enemy.getType().compareTo("Electric") == 0 || enemy.getType().compareTo("Rock") == 0) {                          //not effective
             try {
+                System.out.print("Pidgey attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n");
                 int damage = super.getAttackSet().get(attackIndex).baseDamage / 2;
                 if((enemy.getHp() < damage))
                 {
@@ -40,7 +42,7 @@ public class Pidgey extends Pokemon {
                     enemy.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
                     Thread.sleep(2 * 1000);
                     System.out.print("Not really effective...\n");
-                    System.out.print("Inflicts " + damage + " with it's attack\n\n!");
+                    System.out.print("Inflicts " + damage + " with it's attack!\n\n");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -48,6 +50,7 @@ public class Pidgey extends Pokemon {
 
         } else {                                                                                        //basic attack
             try {
+                System.out.print("Pidgey attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n");
                 int damage = super.getAttackSet().get(attackIndex).baseDamage;
                 if((enemy.getHp() < damage))
                 {

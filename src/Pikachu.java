@@ -44,7 +44,7 @@ public class Pikachu extends Pokemon {
                     System.out.print("Pikachu attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n");
                     Thread.sleep(2 * 1000);
                     System.out.print("Not really effective...\n");
-                    System.out.print("Inflicts " + damage + " with it's attack\n\n!");
+                    System.out.print("Inflicts " + damage + " with it's attack!\n\n");
                 }
             } catch (Exception e) {
                 e.printStackTrace();

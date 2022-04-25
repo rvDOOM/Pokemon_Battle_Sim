@@ -12,8 +12,8 @@ public class Runner {
 
         //Pikachu
         ArrayList<Attack> pikachuAttackSet = new ArrayList<Attack>();
-        pikachuAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 40));
-        pikachuAttackSet.add(new Attack("Thunder Shock", "", 30, "Electric", 40));
+        pikachuAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 10));
+        pikachuAttackSet.add(new Attack("Thunder Shock", "", 30, "Electric", 15));
         pikachuAttackSet.add(new Attack("Thunder Wave", "", 20, "Electric", 10));
         pikachuAttackSet.add(new Attack("Thunder Bolt", "", 15, "Electric", 90));
         pikachu = new Pikachu(pikachuAttackSet);
@@ -21,8 +21,8 @@ public class Runner {
 
         //Pidgey
         ArrayList<Attack> pidgeyAttackSet = new ArrayList<Attack>();
-        pidgeyAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 40));
-        pidgeyAttackSet.add(new Attack("Gust", "", 35, "Flying", 40));
+        pidgeyAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 20));
+        pidgeyAttackSet.add(new Attack("Gust", "", 35, "Flying", 30));
         pidgeyAttackSet.add(new Attack("Feather Dance", "", 15, "Normal", 20));
         pidgey = new Pidgey(pidgeyAttackSet);
 
@@ -47,10 +47,13 @@ public class Runner {
     public static void main(String[] args) {
 
         initializeData();
+        int min = 0;
+        int max = humanPlayer.getPokemon().getAttackSet().size() - 1;
+        int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
         try {
             battleDisplay();
             System.out.print("Human player's turn\n\n");
-            humanPlayer.getPokemon().attack(computerPlayer.getPokemon(), 3);
+            humanPlayer.getPokemon().attack(computerPlayer.getPokemon(), random_int);
             Thread.sleep(3 * 1000);
             battleDisplay();
             System.out.print("Computer player's turn\n\n");
