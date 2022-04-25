@@ -1,17 +1,17 @@
 public class ComputerPlayer extends Player {
-
+    //constructor
     public ComputerPlayer(Pokemon pokemon, Item item) {
         super(pokemon, item);
     }
 
+    //getters
     public Pokemon getPokemon() {
         return super.pokemon;
     }
-
     public Item getItem() {
         return super.item;
     }
-
+    
     public void run() {
         System.out.print("COMPUTER RUNNING AWAY!");
         System.exit(0);

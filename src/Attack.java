@@ -5,6 +5,7 @@ public class Attack {
     private String type;
     int baseDamage;
 
+    //Constructor
     public Attack(String name, String description,int ppCost, String type, int baseDamage){
         this.name = name;
         this.description = description;
@@ -13,22 +14,19 @@ public class Attack {
         this.baseDamage = baseDamage;
     }
 
+    //getters
     public String getName(){
         return name;
     }
-
     public String getDescription(){
         return description;
     }
-
     public int getPpCost(){
         return ppCost;
     }
-
     public String getType(){
         return type;
     }
-
     public int getBaseDamage(){
         return baseDamage;
     }

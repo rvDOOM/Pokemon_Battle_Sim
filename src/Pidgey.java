@@ -20,7 +20,7 @@ public class Pidgey extends Pokemon {
                     System.exit(1);
                 }else {
                     enemy.setHp(enemy.getHp() - damage);
-                    enemy.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
+                    super.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
                     Thread.sleep(2 * 1000);
                     System.out.print("It's super effective!\n");
                     System.out.print("Inflicts " + damage + " with it's attack!\n\n");
@@ -39,7 +39,7 @@ public class Pidgey extends Pokemon {
                     System.exit(1);
                 }else {
                     enemy.setHp(enemy.getHp() - damage);
-                    enemy.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
+                    super.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
                     Thread.sleep(2 * 1000);
                     System.out.print("Not really effective...\n");
                     System.out.print("Inflicts " + damage + " with it's attack!\n\n");
@@ -62,7 +62,7 @@ public class Pidgey extends Pokemon {
                     System.out.print("Pidgey attacks with " + super.getAttackSet().get(attackIndex).getName() + "!\n");
                     Thread.sleep(2 * 1000);
                     System.out.print("Inflicts " + damage + " with it's attack!");
-                    enemy.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
+                    super.setPp(enemy.getPp() - super.getAttackSet().get(attackIndex).getPpCost());
                 }
             } catch (Exception e) {
                 e.printStackTrace();

@@ -21,8 +21,8 @@ public class Runner {
 
         //Pidgey
         ArrayList<Attack> pidgeyAttackSet = new ArrayList<Attack>();
-        pidgeyAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 20));
-        pidgeyAttackSet.add(new Attack("Gust", "", 35, "Flying", 30));
+        pidgeyAttackSet.add(new Attack("Quick Attack", "", 10, "Normal", 20));
+        pidgeyAttackSet.add(new Attack("Gust", "", 10, "Flying", 15));
         pidgeyAttackSet.add(new Attack("Feather Dance", "", 15, "Normal", 20));
         pidgey = new Pidgey(pidgeyAttackSet);
 
@@ -52,6 +52,7 @@ public class Runner {
         int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
         try {
             battleDisplay();
+            Thread.sleep(3 * 1000);
             System.out.print("Human player's turn\n\n");
             humanPlayer.getPokemon().attack(computerPlayer.getPokemon(), random_int);
             Thread.sleep(3 * 1000);
