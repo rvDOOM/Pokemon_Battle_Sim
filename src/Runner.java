@@ -12,9 +12,9 @@ public class Runner {
 
         //Pikachu
         ArrayList<Attack> pikachuAttackSet = new ArrayList<Attack>();
-        pikachuAttackSet.add(new Attack("Quick Attack", "", 30, "Normal", 10));
-        pikachuAttackSet.add(new Attack("Thunder Shock", "", 30, "Electric", 15));
-        pikachuAttackSet.add(new Attack("Thunder Wave", "", 20, "Electric", 10));
+        pikachuAttackSet.add(new Attack("Quick Attack", "", 10, "Normal", 10));
+        pikachuAttackSet.add(new Attack("Thunder Shock", "", 15, "Electric", 15));
+        pikachuAttackSet.add(new Attack("Thunder Wave", "", 5, "Electric", 10));
         pikachuAttackSet.add(new Attack("Thunder Bolt", "", 15, "Electric", 90));
         pikachu = new Pikachu(pikachuAttackSet);
 
@@ -41,7 +41,7 @@ public class Runner {
 
     public static void battleDisplay(){
         System.out.print("Human Player\n" + humanPlayer.getPokemon());
-        System.out.print("\nComputer Player\n\n" + computerPlayer.getPokemon());
+        System.out.print("\nComputer Player\n\n" + computerPlayer.getPokemon() + "\n");
     }
 
     public static void main(String[] args) {
