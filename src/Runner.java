@@ -7,6 +7,9 @@ public class Runner {
     private static Player computerPlayer;
 
 
+    /*
+     * Populates data for all objects(pokemon, players, items)
+     */
     public static void initializeData(){
         //Create attack sets for each Pokemon
 
@@ -39,6 +42,9 @@ public class Runner {
 
     }
 
+    /*
+    * Displays human player's and enemy players pokemon's current stats
+     */
     public static void battleDisplay(){
         System.out.print("Human Player\n" + humanPlayer.getPokemon());
         System.out.print("\nComputer Player\n\n" + computerPlayer.getPokemon() + "\n");

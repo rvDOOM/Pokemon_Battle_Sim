@@ -5,7 +5,14 @@ public class Attack {
     private String type;
     int baseDamage;
 
-    //Constructor
+    /**
+     * Constructor
+     * @param name name of attack
+     * @param description attacks description
+     * @param ppCost pp cost of an attack
+     * @param type attack's type
+     * @param baseDamage base attack damage
+     */
     public Attack(String name, String description,int ppCost, String type, int baseDamage){
         this.name = name;
         this.description = description;

@@ -5,7 +5,13 @@ public class Pidgey extends Pokemon {
         super("Pidgey", 40, 45, "Flying", attackSet);
     }
 
-
+    /**
+     * If defending pokemon's type is bug or fighting; attack damage multiplied by 2
+     * If defending pokemon's type is electric or rock; attack damage halved
+     * else attack normal
+     * @param enemy the pokemon object that is on the receiving end of damage
+     * @param attackIndex position where desired attack lies in the ArrayList attackSet
+     */
     @Override
     public void attack(Pokemon enemy, int attackIndex) {
         if ((enemy.getType().compareTo("Bug") == 0 || enemy.getType().compareTo("Fighting") == 0 || enemy.getType().compareTo("Grass") == 0)) {

@@ -17,6 +17,11 @@ public class ComputerPlayer extends Player {
         System.exit(0);
     }
 
+    /**
+     * Random action generated with Math.random()
+     * Computer player will either attack, use item or run
+     * @param enemy takes pokemon object from enemy in the event an attack occurs
+     */
     public void randomAction(Pokemon enemy) {
         double i = Math.random();
         if (i >= 0 && i <= .33)      //attack

@@ -6,7 +6,14 @@ public class Pikachu extends Pokemon {
         super("Pikachu", 35, 50, "Electric", attackSet);
     }
 
-
+    /**
+     * If defending pokemon's type is flying or water; attack is multiplied by 2
+     * If defending pokemon's type is electric or grass; attack is halved
+     * If defending pokemon's type is ground; attack has no effect
+     * else attack pokemon normally
+     * @param enemy the pokemon object that is on the receiving end of damage
+     * @param attackIndex position where desired attack lies in the ArrayList attackSet
+     */
     @Override
     public void attack(Pokemon enemy, int attackIndex) {
         if ((enemy.getType().compareTo("Flying") == 0 || enemy.getType().compareTo("Water") == 0))  //super effective
